@@ -119,7 +119,7 @@ public class PhotoAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int position) {
-        return getCurrentPhotos().get(position).hashCode();
+        return getCurrentPhotos().get((showCamera ? position - 1 : position)).hashCode();
     }
 
     @Override
